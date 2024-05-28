@@ -1,5 +1,7 @@
+import 'package:floor/floor.dart';
 import 'package:news_app/features/daily_news/domain/entities/article.dart';
 
+@Entity(tableName: 'article', primaryKeys: ['id'])
 class ArticleModel extends ArticleEntities {
   const ArticleModel({
     int? id,
