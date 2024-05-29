@@ -14,9 +14,9 @@ class GetSavedArticles extends LocalArticlesEvents {
 }
 
 class RemoveArticles extends LocalArticlesEvents {
-  const RemoveArticles();
+  const RemoveArticles(ArticleEntities article) : super(article: article);
 }
 
 class SaveArticles extends LocalArticlesEvents {
-  const SaveArticles();
+  const SaveArticles(ArticleEntities article) : super(article: article);
 }

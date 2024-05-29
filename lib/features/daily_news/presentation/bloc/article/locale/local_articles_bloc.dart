@@ -16,9 +16,9 @@ class LocalArticleBloc extends Bloc<LocalArticlesEvents, LocalArticleState> {
     this._removeArticleUseCase,
     this._saveArticleUseCase,
   ) : super(const LocalArticlesLoading()) {
-    on<GetSavedArticleUseCase>(onGetSaveArticles);
-    on<SaveArticleUseCase>(onSaveArticle);
-    on<RemoveArticleUseCase>(onRemoveArticles);
+    on<GetSavedArticles>(onGetSaveArticles);
+    on<RemoveArticles>(onRemoveArticle);
+    on<SaveArticles>(onSaveArticle);
   }
 
   void onGetSaveArticles(
