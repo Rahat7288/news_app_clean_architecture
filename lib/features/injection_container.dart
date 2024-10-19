@@ -9,7 +9,8 @@ import 'daily_news/data/data_sources/remote/news_api_service.dart';
 import 'daily_news/data/repository/article_repository_impl.dart';
 import 'daily_news/domain/repository/article_repository.dart';
 import 'daily_news/domain/usecases/get_articles.dart';
-import 'daily_news/presentation/bloc/article/remote/remote_article_bloc.dart';
+import 'daily_news/presentation/bloc/article/article_bloc.dart';
+// import 'daily_news/presentation/bloc/article/remote/remote_article_bloc.dart';
 
 final sl = GetIt.instance;
 
@@ -32,5 +33,6 @@ Future<void> initializeDependencies() async {
   sl.registerSingleton<RemoveArticleUseCase>(RemoveArticleUseCase(sl()));
 
 //   Blocs=============
-  sl.registerFactory<RemoteArticleBloc>(() => RemoteArticleBloc(sl()));
+//   sl.registerFactory<RemoteArticleBloc>(() => RemoteArticleBloc(sl()));
+  sl.registerFactory<ArticleBloc>(() => ArticleBloc(sl(), sl(), sl(), sl()));
 }
